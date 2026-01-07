@@ -13,32 +13,33 @@ SELECT * FROM observations;
 
 
 -- MISSION 1
-Select * From Observations limit 10;
+Select * From Observations LIMIT 10;
 
 
 -- MISSION 2
-SELECT DISTINCT region_id FROM *;
+SELECT DISTINCT region_id FROM observations;
 
 
 -- MISSION 3
-select count (DISTINCTspecies_id) AS total_species from observations;
+SELECT COUNT (DISTINCT species_id) FROM observations;
 
 
 -- MISSION 4
-select * from observations 
+SELECT * from observations 
 WHERE region_id = 2;
 
 
 -- MISSION 5
-select * from observations
+SELECT * from observations
 where observation_date = '1998-08-08';
 
 
 -- MISSION 6
-SELECT region_id count(*)AS total_observations
+SELECT region_id COUNT(* ) AS total_observations
 FROM observations
 GROUP BY region_id
-ORDER BY total_observations DESC;
+ORDER BY total_observations DESC
+LIMIT 1;
 
 
 -- MISSION 7
