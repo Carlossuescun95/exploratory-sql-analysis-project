@@ -32,7 +32,8 @@ WHERE observation_date = '1998-08-08';
 SELECT region_id, COUNT(*) AS total_observations
 FROM observations
 GROUP BY region_id
-ORDER BY total_observations DESC;
+ORDER BY total_observations DESC
+LIMIT 1;
 
 -- 7. Most frequent species
 SELECT species_id, COUNT(*) AS total_records
